@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Income Prediction</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <style type="text/css">
+         div.row,div.form-row{
+         margin-top: 30px;
+         }
+      </style>
+   </head>
+   <body>
+      <form action="/result" method="POST">
+         <div class="jumbotron text-center" style="margin-bottom:0">
+            <div class="container">
+               <h1>Income Prediction</h1>
+               <p>Kindly fill all the below details to check income value</p>
+            </div>
+         </div>
+         <div class="container">
+         <div class="row">
+            <div class="col">
+               <input type="number" class="form-control" name="age" placeholder="Enter your Age">
+            </div>
+            <div class="col">
+               <input type="number" class="form-control" placeholder="Final Weight" name="finalweight">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <select class="form-control" id="education" name="education">
+                  <option value="1">Preschool</option>
+                  <option value="2">1st-4th</option>
+                  <option value="3">5th-6th</option>
+                  <option value="4">7th-8th</option>
+                  <option value="5">9th</option>
+                  <option value="6">10th</option>
+                  <option value="7">11th</option>
+                  <option value="8">12th</option>
+                  <option value="9">HS-grad</option>
+                  <option value="10">Some-college</option>
+                  <option value="11">Assoc-voc</option>
+                  <option value="12">Assoc-acdm</option>
+                  <option value="13">Bachelors</option>
+                  <option value="14">Masters</option>
+                  <option value="16">Doctorate</option>
+                  <option value="15">Prof-school</option>
+                  <option selected>Select your Education</option>
+               </select>
+            </div>
+            <div class="col">
+               <select class="form-control" id="relationship" name="relationship">
+                  <option value="0">Husband</option>
+                  <option value="1">Not-in-family</option>
+                  <option value="2">Other-relative</option>
+                  <option value="3">Own-child</option>
+                  <option value="4">Unmarried</option>
+                  <option value="5">Wife</option>
+                  <option selected>Relationship</option>
+               </select>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <input type="number" class="form-control" placeholder="Capital Gain" name="capitalgain">
+            </div>
+            <div class="col">
+               <input type="number" class="form-control" placeholder="Capital Loss" name="capitalloss">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <input type="number" class="form-control" placeholder="Hours Per Week" name="hoursperweek">
+            </div>
+            <div class="col">
+               <select class="form-control" id="nativecountry" name="nativecountry">
+                  <option value="18">Cambodia</option>
+                  <option value="107">Canada</option>
+                  <option value="68">China</option>
+                  <option value="56">Columbia</option>
+                  <option value="92">Cuba</option>
+                  <option value="67">Dominican-Republic</option>
+                  <option value="27">Ecuador</option>
+                  <option value="100">El-Salvador</option>
+                  <option value="86">England</option>
+                  <option value="27">France</option>
+                  <option value="128">Germany</option>
+                  <option value="29">Greece</option>
+                  <option value="63">Guatemala</option>
+                  <option value="42">Haiti</option>
+                  <option value="1">Holand-Netherlands</option>
+                  <option value="12">Honduras</option>
+                  <option value="19">Hong</option>
+                  <option value="13">Hungary</option>
+                  <option value="100">India</option>
+                  <option value="42">Iran</option>
+                  <option value="24">Ireland</option>
+                  <option value="68">Italy</option>
+                  <option value="80">Jamaica</option>
+                  <option value="59">Japan</option>
+                  <option value="17">Laos</option>
+                  <option value="610">Mexico</option>
+                  <option value="33">Nicaragua</option>
+                  <option value="14">Outlying-US(Guam-USVI-etc)</option>
+                  <option value="30">Peru</option>
+                  <option value="188">Philippines</option>
+                  <option value="56">Poland</option>
+                  <option value="34">Portugal</option>
+                  <option value="109">Puerto-Rico</option>
+                  <option value="11">Scotland</option>
+                  <option value="71">South</option>
+                  <option value="42">Taiwan</option>
+                  <option value="17">Thailand</option>
+                  <option value="18">Trinadad &amp; Tobago</option>
+                  <option value="27504">United-States</option>
+                  <option value="64">Vietnam</option>
+                  <option value="16">Yugoslavia</option>
+                  <option selected>Native Country</option>
+               </select>
+            </div>
+         </div>
+         <div class="form-row text-center">
+            <div class="col-12">
+               <input type="submit" class="btn btn-primary" value="Submit"/>
+            </div>
+         </div>
+      </form>
+   </body>
+</html>
