@@ -15,7 +15,7 @@
       </style>
    </head>
    <body>
-      <form action="/result" method="POST">
+      <form class="needs-validation" action="/result" method="POST">
          <div class="jumbotron text-center" style="margin-bottom:0">
             <div class="container">
                <h1>Income Prediction</h1>
@@ -25,15 +25,16 @@
          <div class="container">
          <div class="row">
             <div class="col">
-               <input type="number" class="form-control" name="age" placeholder="Enter your Age">
+               <input type="number" class="form-control" name="age" placeholder="Enter your Age" required>
             </div>
             <div class="col">
-               <input type="number" class="form-control" placeholder="Final Weight" name="finalweight">
+               <input type="number" class="form-control" placeholder="Final Weight" name="finalweight" required>
             </div>
          </div>
          <div class="row">
-            <div class="col">
-               <select class="form-control" id="education" name="education">
+            <div class="col formgroup">
+               <select required class="form-control" name="education" id="education">
+                  <option value="" disabled selected>Select your Education</option>
                   <option value="1">Preschool</option>
                   <option value="2">1st-4th</option>
                   <option value="3">5th-6th</option>
@@ -50,35 +51,35 @@
                   <option value="14">Masters</option>
                   <option value="16">Doctorate</option>
                   <option value="15">Prof-school</option>
-                  <option selected>Select your Education</option>
                </select>
             </div>
             <div class="col">
-               <select class="form-control" id="relationship" name="relationship">
+               <select required class="form-control" id="relationship" name="relationship">
+				  <option value="" disabled selected>Relationship</option>
                   <option value="0">Husband</option>
                   <option value="1">Not-in-family</option>
                   <option value="2">Other-relative</option>
                   <option value="3">Own-child</option>
                   <option value="4">Unmarried</option>
-                  <option value="5">Wife</option>
-                  <option selected>Relationship</option>
+                  <option value="5">Wife</option>                  
                </select>
             </div>
          </div>
          <div class="row">
             <div class="col">
-               <input type="number" class="form-control" placeholder="Capital Gain" name="capitalgain">
+               <input type="number" class="form-control" placeholder="Capital Gain" name="capitalgain" required>
             </div>
             <div class="col">
-               <input type="number" class="form-control" placeholder="Capital Loss" name="capitalloss">
+               <input type="number" class="form-control" placeholder="Capital Loss" name="capitalloss" required>
             </div>
          </div>
          <div class="row">
             <div class="col">
-               <input type="number" class="form-control" placeholder="Hours Per Week" name="hoursperweek">
+               <input type="number" class="form-control" placeholder="Hours Per Week" name="hoursperweek" required>
             </div>
             <div class="col">
-               <select class="form-control" id="nativecountry" name="nativecountry">
+               <select required class="form-control" id="nativecountry" name="nativecountry">
+                  <option value="" disabled selected>Native Country</option>
                   <option value="18">Cambodia</option>
                   <option value="107">Canada</option>
                   <option value="68">China</option>
@@ -120,7 +121,6 @@
                   <option value="27504">United-States</option>
                   <option value="64">Vietnam</option>
                   <option value="16">Yugoslavia</option>
-                  <option selected>Native Country</option>
                </select>
             </div>
          </div>
